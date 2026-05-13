@@ -21,7 +21,21 @@ A real user may not even have direct access to call the function.
 
 A unit test would be more appropriate in this case. 
 
+### Expose: Navigation vs Snapshot
 
+Navigation measures performance immediately after the page loads by reloading the page, while snapshot measures performance in the page's current state. 
+
+Navigation might be used to check how long the header takes to load, while snapshot might be used to check for accessibility issues while a form is partially filled in. 
+
+### Expose: 3 improvements
+
+- The document should add a meta description that summarizes page content. 
+
+- The html element should add a `lang` attribute to ensure a screen reader will announce the page's text correctly. 
+
+- From a Timespan run, non-composited animations on the buttons can be janky and should be replaced. 
+
+- On PageSpeed Insights but not Lighthouse, browser errors (failed GET requests for the images) are being logged to the console. These should not be logged to console.  
 
 
 
